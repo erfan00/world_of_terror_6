@@ -1,5 +1,5 @@
 // Search "D3 Margin Convention" on Google to understand margins.
-var margin_l_1_2 = {top_l_1_2: 20, right_l_1_2: 180, bottom_l_1_2: 30, left_l_1_2: 70},
+var margin_l_1_2 = {top_l_1_2: 20, right_l_1_2: 130, bottom_l_1_2: 30, left_l_1_2: 70},
     width_l_1_2 = 750 - margin_l_1_2.right_l_1_2 - margin_l_1_2.left_l_1_2,
     height_l_1_2 = 550 - margin_l_1_2.top_l_1_2 - margin_l_1_2.bottom_l_1_2;
 
