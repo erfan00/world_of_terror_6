@@ -12,19 +12,7 @@ var x_l_1 = d3.time.scale()
 var y_l_1 = d3.scale.linear()
     .range([height_l_1, 0]);
 
-//var color_l_1 = d3.scale.category20();
 
-//var color_l_1 = d3.scale.ordinal()
-//        .range([ "#53AFAD",
-//                  "#5D6F85", "#AD4F93",
-//                  
-//                
-////                                  "#87B9E5", "#6094CE","#446DAB","#315088",
-//                //"#E3EFCA","#C8DF95","#ADCF60","#8DB438",
-//                "#DAE3E5","#BBD1EA","#A1C6EA","#507DBC",
-//                "#F2F3AE", "#EDD382","#FC9E4F","#F55541",
-//                
-//                  "#E0B1CB","#BE95C4","#9F86C0","#5E548E"]);
 var color_l_1= d3.scale.ordinal()
         .range([ "#ccebc5",
                   "#decbe4", 
@@ -131,8 +119,7 @@ d3.csv("data/output_new_2.csv", function(error, data){
       .on("mouseover", function(d) { 
           d3.select(this).style("stroke-width", "5px");
           svg_l_1.selectAll("text.text_country" + d.name.substring(0, 4)).style("opacity", "1").style("font-size", "13px");})
-//      .append("svg:title")
-//      .text(function(d) {return "Country: " + d.name;})
+
       .on("mouseout", function(d) {
           d3.select(this).style("stroke-width", "1.5px");
           svg_l_1.selectAll("text.text_country" + d.name.substring(0, 4)).style("font-size", "10px");
@@ -141,13 +128,7 @@ d3.csv("data/output_new_2.csv", function(error, data){
           }
           });
     
-//    path.attr("class", function(d) {return d.name.substring(0,4);})
-//      .on("mouseover", function(d) {svg_l_1.selectAll("path." + d.name.substring(0, 4)).style("stroke-width", "5px");});
-//      .append("svg:title")
-//      .text(function(d) {return "Country: " + d.name;});
-//        .on("mouseout", function(d) {
-//                svg.selectAll("rect.terror_group" + d.substring(d.length - 4, d.length)).style("fill-opacity", 0.8).style("stroke","none");
-//        });
+
         
     country.append("text")
       .datum(function(d) { return {name: d.name, value: d.values[d.values.length - 1]}; })
@@ -165,7 +146,7 @@ d3.csv("data/output_new_2.csv", function(error, data){
     })
       .text(function(d) { return d.name; });
     
-    var varNames = ["Iraq","Syria","Yemen","Algeria","Afghanistan","Pakistan","India","Sri Lanka","Nigeria","Somalia","Sudan","Congo","Philippines","Russia","United States"]
+  
     
 //    var legend = svg_l_1.selectAll(".legend")
 //        .data(varNames.slice())
